@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV_Levon_Vita_Eng</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <h2>
+        Lang:
+        <a class="link activ" href="./index.html">
+            <img src="./picture/icon_Eng.jpeg" alt="" width="30">
+        </a>
+
+        <a class="link" href="./index-ua.html">
+            <img src="./picture/icon_Uk.png" alt="" width="30">
+        </a>
+    </h2>
+
+    <img class="image" src="./picture/foto-vita_levon.jpg" alt="foto-vita_levon" width="400">
+
+
+    <!--Контакти-->
+    <div>
+        <h1>Levon Vita</h1>
+        <p>
+            Markup / Layout Engineer
+        </p>
+        <h3>
+            Contact:
+        </h3>
+        <ul>
+            <li>
+                <a href="mailto:w.iv.von@gmail.com">
+                    📧 w.iv.von@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/levon-vita-3b59b3324/">
+                    🔗 LinkedIn: levon-vita
+                </a>
+            </li>
+            <li>
+                <a href="tel:+380632439402">
+                    📞 +380 63 243 94 02
+                </a>
+            </li>
+        </ul>
+        <h3>
+            Skills:
+        </h3>
+        <ul>
+            <li>
+                HTML, CSS/SASS
+            </li>
+            <li>
+                WordPress, Elementor, Woocommerce
+            </li>
+            <li>
+                Figma, Git, AI
+            </li>
+        </ul>
+        <hr>
+        <h2>
+            Professional Summary
+        </h2>
+        <p>
+            Frontend Engineer with 1+ year of experience in creating responsive, user-focused websites and eCommerce
+            platforms. Skilled in HTML, CSS/SASS, WordPress, Elementor, and WooCommerce. Strong understanding of UI/UX
+            design principles and modern web standards. Experienced in translating Figma designs into functional,
+            accessible web interfaces. Proficient in Git version control and actively exploring AI tools to streamline
+            development. Passionate about clean, maintainable code and effective team collaboration.
+        </p>
+        <hr>
+        <h2>
+            Professional Achievements
+        </h2>
+        <ul>
+            <li>
+                Built multiple responsive landing pages and eCommerce websites
+            </li>
+            <li>
+                Continuously improving frontend skills through real projects and training
+            </li>
+            <li>
+                Proactively exploring AI tools to enhance coding efficiency
+            </li>
+        </ul>
+        <hr>
+        <h2>
+            Experience
+        </h2>
+        <h3>
+            Cocodrilo Whites Company
+        </h3>
+        <ul>
+            <li>
+                Developing responsive WordPress websites and custom landing pages using Elementor.
+            </li>
+            <li>
+                Collaborating with the design team to ensure pixel-perfect implementation.
+            </li>
+        </ul>
+        <h3>
+            Freelance
+        </h3>
+        <ul>
+            <li>
+                Designed and maintained websites and landing pages using WordPress.
+            </li>
+            <li>
+                Integrated CSS animations to enhance user interaction and engagement.
+            </li>
+        </ul>
+        <h3>
+            Beetroot Academy
+        </h3>
+        <ul>
+            <li>
+                Front-end Development Course
+            </li>
+        </ul>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
