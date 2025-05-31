@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4. Figma - Denis Novik</title>
+    <style>
+        .header {
+            border: 2px solid red;
+            background-color: antiquewhite;
+        }
+
+        .container {
+            /* width: 90px; */
+            /* width: calc(100% - 30px);
+            max-width: 970px;
+            margin: 0 auto; */
+
+            width: min(90%, 970px);
+            margin-inline: auto;
+
+            border: 2px solid blue;
+        }
+
+        .header-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About me</a>
+                        </li>
+                        <li>
+                            <a href="#">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <main>
+            <section>
+                <div class="container">
+                    <h1>
+                        Denis
+                    </h1>
+                    <img src="./picture/main_photo.jpg" alt="Denis">
+                </div>
+            </section>
+
+            <section class="gray">
+                <div class="container">
+                    <h2>
+                        About
+                    </h2>
+                    <div class="content">
+                        <p>Hi, I'm Denis – UX/UI designer from Minsk.
+                            I'm interested in design and everything connected with it.
+                        </p>
+                        <p>I'm studying at courses "Web and mobile design
+                            interfaces" in IT-Academy
+                        </p>
+                        <p>
+                            Ready to implement excellent projects
+                            with wonderful people.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <hgroup>
+                        <h2>Skills</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </hgroup>
+                    <nav>
+                        <ul class="skills_list">
+                            <li>
+                                <img src="" alt="">
+                                <p>
+                                    Adobe
+                                    Photoshop
+                                </p>
+                            </li>
+
+                            <li>
+                                foo
+                            </li>
+                            <li>
+                                foo
+                            </li>
+                            <li>
+                                foo
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
