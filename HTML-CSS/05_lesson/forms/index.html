@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ffff, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="https:www.google.com/search" method="get" target="_blank">
+        <input type="search" name="q" value="Some text here">
+        <button type="submit">Search</button>
+    </form>
+
+    <form action="#" method="post">
+        <label for="usermame">Username</label>
+        <input type="text" name="username">
+        <br>
+        <label for="">
+            <input type="password" name="pass">
+        </label>
+        <span class="fake_lbl">
+            Gender
+        </span>
+
+        <label for="">
+            <input type="radio" name="gender" value="male" checked> Male
+        </label>
+
+        <label for="">
+
+            <input type="radio" name="gender" value="female">Female
+        </label>
+        <br>
+        <button type="submit">Log in
+
+        </button>
+
+        <input type="checkbox" name="agree" value="true" id="agree">
+        <label for="agree">I agree</label>
+    </form>
+
+    <button type="submit">
+        <i></i>
+        log in
+    </button>
+
+
+
+    <select name="skills" id="skills">
+        <option value="" selected disabled>-=select=-</option>
+        <optgroup label="">web skills
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="js">js</option>
+        </optgroup>
+
+    </select>
+    <input type="submit" value="log in">
+
+    <br>
+
+
+    <textarea name="message" id="msg" rows="5" cols="50"></textarea>
+
+
+
+
+
+</body>
+
+</html>
