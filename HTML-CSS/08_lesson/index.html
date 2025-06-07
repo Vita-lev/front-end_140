@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .container {
+            width: min(90%, 970px);
+            margin: 0 auto;
+        }
+
+        #foo {
+            text-align: center;
+        }
+
+        div .wrap>p {
+            font-size: 1.2rem;
+            color: blue;
+        }
+
+        .wrap p~p {
+            color: blueviolet;
+        }
+
+        .paging-item {
+            border: 1px solid red;
+        }
+
+        /* span.paging-item {
+            font-weight: 700;
+        } */
+
+        .paging-item.curent {
+            font-weight: 700;
+        }
+
+        .mein-menu {
+            padding-top: 10px;
+
+        }
+
+        .mein-menu ul {
+            border: 2px solid red;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .mein-menu li {
+            display: inline-block;
+            margin-right: 60px;
+        }
+
+        .mein-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .mein-menu>ul>li {
+            text-align: center;
+        }
+
+        .mein-menu>ul>li ul>li>a {
+            position: absolute;
+            color: rgb(246, 16, 0);
+        }
+
+        .mein-menu li+li {
+            margin-right: 60px;
+        }
+
+        button {
+            text-decoration: underline;
+            border: none;
+            background: transparent;
+            color: blueviolet;
+        }
+
+
+        a {
+            background-color: blueviolet;
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 3px 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            height: 44px;
+            color: aliceblue;
+            background-color: black;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 22px;
+            /* width: 180px;
+            text-align: center; */
+            padding: 7px 18px;
+            min-width: 80px;
+            border: 2px solid black;
+        }
+
+        .btn:hover {
+            color: rgb(138, 238, 6);
+            background-image: rgb(224, 35, 114);
+        }
+
+        a:active {
+            background-color: rgb(9, 228, 133);
+        }
+
+        .btn:active {
+            background-color: yellow
+        }
+
+        .btn:focus {
+            outline: 0 auto;
+            box-shadow: 0 0 0 2px #06e5f5, 0 0 0 4px green, 0 0 0 6px #e1f107;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .box:hover p+p {
+            color: red;
+        }
+
+        .tbl {
+            border-collapse: collapse;
+            width: 100%;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+
+        }
+
+        .tbl th,
+        .tbl td {
+            border-bottom: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        .tbl tbody td {
+            text-align: center;
+        }
+
+        /* .tbl tbody tr:nth-child(1) {
+            background-color: #e1f107;
+        }
+
+        .tbl tbody tr:nth-last-child(2) {
+background-color: #06e5f5;
+        } */
+
+        /* .tbl tbody tr:nth :nth-last-child {
+            background-color: #e1f107;
+        }
+
+        .tbl tbody tr:nth-first-child {
+            background-color: #06e5f5;
+        } */
+
+        /* .tbl tbody tr:nth-child(2) {
+            background-color: #ac13b7;
+        } */
+
+        /* .tbn tbody tr:first-child {
+            color: red;
+        } */
+
+        .tbl tbody th td:first-child {
+            color: blue;
+        }
+
+        .tbl tbody tr td:hover {
+            background-color: rebeccapurple;
+            color: #e1f107;
+        }
+
+        td:hover {
+            color: blue;
+        }
+
+        .wrapper::after {
+            content: "bar";
+        }
+
+
+        .wrapper::before {
+            content: '';
+            background-color: #06e5f5;
+            height: 20px;
+            display: block;
+        }
+
+
+
+        .wrapper p {
+            position: relative;
+        }
+
+        .wrapper p::after {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            left: 0;
+            bottom: 15px;
+            transition: all .5s ease;
+
+        }
+
+        .wrapper p:hover::after,
+        .wrapper p:hover::before {
+            width: 100%;
+        }
+
+        label
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <p>
+            Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+
+    <div class="container">
+
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>home</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>home</th>
+                    <th>email</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>home</th>
+                    <th>email</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>home</th>
+                    <th>email</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th>home</th>
+                    <th>email</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th>home</th>
+                    <th>email</th>
+                </tr>
+
+
+
+            <tfoot>
+                <tr>
+                    <th>1</th>
+                    <td>bar</td>
+                    <td>bar</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>bar</td>
+                    <td>bar</td>
+                </tr>
+            </tfoot>
+            <tr>
+                <th>#</th>
+                <th>home</th>
+                <th>email</th>
+            </tr>
+
+            </tbody>
+
+
+
+        </table>
+
+
+        <br><br>
+
+    </div>
+    <br><br>
+
+    <div class="box">
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <a href="javascript:void(0)" onclick="sendForm()" data-state="disabled">send message</a>
+
+    <br>
+    <br>
+
+    <button>send message</button>
+
+
+    <a href="">send message</a>
+
+    <br>
+
+    <button class="btn" tabindex="0">send message</button>
+
+    <button class="btn">ok</button>
+
+    <button class="btn">Lorem, ipsum dolor.</button>
+
+
+
+    <div class="container">
+
+        <nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="#">services</a>
+                </li>
+
+                <ul>
+                    <li>
+                        <a href="#">for busines</a>
+                    </li>
+                    <li>
+                        <a href="#">for customers</a>
+                    </li>
+                    <ul>
+                        <li>
+                            <a href="#">for busines</a>
+                        </li>
+                        <li>
+                            <a href="#">for customers</a>
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+        </nav>
+        <div class="wrap">
+            <p tabindex="-1">Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <div class="iner">
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <a href="#" class="paging-item">1</a>
+        </li>
+
+        <li>
+            <a href="#" class="paging-item">2</a>
+        </li>
+
+        <li>
+            <span class="paging-item curent">3</span>
+        </li>
+
+        <li>
+            <a href="#" class="paging-item">4</a>
+        </li>
+
+    </ul>
+
+
+
+    <ul>
+        <li>
+            <a href="#">home</a>
+        </li>
+        <li>
+            <a href="#">about</a>
+        </li>
+        <li>
+            <a href="#">contact</a>
+        </li>
+    </ul>
+</body>
+
+</html>
