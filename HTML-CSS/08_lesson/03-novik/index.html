@@ -1,16 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>03 - Figma basic</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		body {
+			font-family: "Open Sans", sans-serif;
+			color: #070707;
+			font-size: 1.125rem;
+			text-align: center;
+		}
+
+		.container {
+			width: min(90%, 970px);
+			margin-inline: auto;
+		}
+
+		/* header {
+			padding: 27.5px 0;
+		} */
+
+		header .container {
+			border-bottom: 1px solid #828282;
+			padding: 27.5px 0;
+		}
+
+		.main-menu ul {
+			text-align: center;
+			font-size: 0;
+		}
+
+		.main-menu ul li {
+			display: inline-block;
+			/* margin-right: 40px; */
+		}
+
+		.main-menu ul li+li {
+			margin-left: 40px;
+		}
+
+		.main-menu ul li a {
+			color: #828282;
+			text-decoration: none;
+			font-size: 1.125rem;
+		}
+
+		.main-menu ul li a:hover,
+		.main-menu ul li a:active {
+			color: #070707;
+		}
+
+		/* header section and */
+
+		/* start section 1 */
+		.first-section {
+			/* padding: 12px 0 0 0; */
+			padding-top: 12px;
+			padding-bottom: 0px;
+		}
+
+		h1 {
+			font-size: 3rem;
+			margin-bottom: 50px;
+			text-align: left;
+		}
+
+		/* start section about */
+
+		section,
+		footer {
+			padding: 100px 0;
+		}
+
+		.bg-gray {
+			background-color: #f6f6f6;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 2.125rem;
+			margin-bottom: 50px;
+		}
+
+		.content {
+			/* width: min(100%, 480px); */
+			max-width: 480px;
+			margin-inline: auto;
+			text-align: center;
+		}
+
+		/* .content p:nth-child(2) {
+			margin: 30px 0;
+		} */
+
+		/* .content p+p {
+			margin-top: 30px;
+		} */
+
+		.content p:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		/* .content *:last-child {
+			margin-bottom: 0;
+		} */
+
+		/* section skills */
+
+		hgroup {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		hgroup h2 {
+			margin-bottom: 20px;
+		}
+
+		/* h2:has(+ p) {
+			margin-bottom: 20px;
+		} */
+		ul ol {
+			list-style: none;
+		}
+
+		.skills-list {
+			font-size: 0;
+			margin-left: -1px;
+			/* margin-right: -1px; */
+		}
+
+		.skills-list li {
+			display: inline-block;
+			width: 170px;
+			/* text-align: center; */
+		}
+
+		.skills-list li:not(:last-child) {
+			margin-right: 97px;
+		}
+
+		.skills-list li img {
+			margin-bottom: 25px;
+		}
+
+		.skills-list li .skills-title {
+			color: #828282;
+			font-size: 0.875rem;
+			letter-spacing: 0, 0175rem;
+			margin-bottom: 60px;
+			padding: 0 30px;
+			font-weight: 700;
+			/* height: 38px; */
+			min-height: 38px;
+		}
+
+		.rating img:not(:last-child) {
+			/* margin-bottom: 0 ; */
+			margin-right: 7px;
+		}
+
+		.rating img .gray {
+			opacity: 0.2;
+		}
+
+		.portfolio-item:not(:last-child) {
+			margin-bottom: 70px;
+		}
+
+		.portfolio-item img {
+			margin-bottom: 40px;
+		}
+
+		/* .portfolio-item div {} */
+
+		.portfolio-item div a {
+			color: #070707;
+		}
+
+		.portfolio-item div a:hover {
+			text-decoration: none;
+		}
+
+		.btn {
+			display: inline-block;
+			color: #fff;
+			background-color: #070707;
+			line-height: 30px;
+			font-family: "Open sans", sans-serif;
+			font-size: 1.2rem;
+			text-decoration: none;
+			border: none;
+			cursor: pointer;
+			border-radius: 22px;
+			padding: 5px 16px;
+			min-width: 80px;
+			border: 2px solid #070707;
+		}
+
+		.btn:hover {
+			color: #070707;
+			background-color: #fff;
+		}
+
+		.btn-wrap {
+			margin-bottom: 40px;
+		}
+
+		.sos-list {
+			margin-bottom: 60px;
+			/* margin-top: 40px; */
+			font-size: 0;
+		}
+
+		.main-menu ul li a:hover,
+		.main-menu ul li a:active {
+			color: #070707;
+
+			text-shadow: 1px 0 1px #070707, 0 1px 1px #070707;
+		}
+
+		.sos-list li:not(:last-child) {
+			margin-right: 50px;
+		}
+
+		.sos-list a:hover {
+			opacity: 1;
+		}
+
+		footer .conteiner {
+			width: min(90%, 310px);
+		}
+	</style>
 </head>
+
 <body>
+
 	<header>
 		<div class="container">
-			<nav>
+			<nav class="main-menu">
 				<ul>
-					<li><a href="#">Home</a></li>
+					<li><a class="" href="#">Home</a></li>
 					<li><a href="#about">About me</a></li>
 					<li><a href="#skills">Skills</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
@@ -19,32 +263,40 @@
 			</nav>
 		</div>
 	</header>
+
 	<main>
-		<section>
+
+		<section class="first-section">
 			<div class="container">
 				<h1>Denis Novik</h1>
 				<img src="assets/images/main-photo.jpg" alt="Denis Novik">
 			</div>
 		</section>
-		<section id="about">
+
+		<section class="bg-gray" id="about">
 			<div class="container">
 				<h2>About me</h2>
-				<p>Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.</p>
-				<p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
-				<p>Ready to implement excellent projects with wonderful people.</p>
+				<div class="content">
+					<p>Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with
+						it.
+					</p>
+					<p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+					<p>Ready to implement excellent projects with wonderful people.</p>
+				</div>
 			</div>
 		</section>
+
 		<section id="skills">
 			<div class="container">
 				<hgroup>
 					<h2>Skills</h2>
 					<p>I work in such programs as</p>
 				</hgroup>
-				<ul>
+				<ul class="skills-list">
 					<li>
 						<img src="assets/images/ps-logo.png" alt="Adobe Photoshop logo">
-						<div>
-							<b>Adobe Photoshop</b>
+						<div class="skills-title">
+							Adobe Photoshop
 						</div>
 						<div class="rating">
 							<img src="assets/images/star-icon.png" alt="Star icon">
@@ -56,8 +308,8 @@
 					</li>
 					<li>
 						<img src="assets/images/ai-logo.png" alt="Adobe Illustrator logo">
-						<div>
-							<b>Adobe Illustrator</b>
+						<div class="skills-title">
+							Adobe Illustrator
 						</div>
 						<div class="rating">
 							<img src="assets/images/star-icon.png" alt="Star icon">
@@ -69,8 +321,8 @@
 					</li>
 					<li>
 						<img src="assets/images/ae-logo.png" alt="Adobe After Effects logo">
-						<div>
-							<b>Adobe After Effects</b>
+						<div class="skills-title">
+							Adobe After Effects
 						</div>
 						<div class="rating">
 							<img src="assets/images/star-icon.png" alt="Star icon">
@@ -82,8 +334,8 @@
 					</li>
 					<li>
 						<img src="assets/images/figma-logo.png" alt="Figma logo">
-						<div>
-							<b>Figma</b>
+						<div class="skills-title">
+							Figma
 						</div>
 						<div class="rating">
 							<img src="assets/images/star-icon.png" alt="Star icon">
@@ -96,8 +348,9 @@
 				</ul>
 			</div>
 		</section>
-		<section id="portfolio">
+		<section class="portfolio-item" id="portfolio">
 			<div class="container">
+				<h2>Portfolio</h2>
 				<div class="item">
 					<img src="assets/images/portfolio-store.png" alt="Online fashion store - Homepage">
 					<div>
@@ -119,16 +372,17 @@
 			</div>
 		</section>
 	</main>
+
 	<footer id="contacts">
 		<div class="container">
 			<hgroup>
 				<h2>Contacts</h2>
 				<p>Want to know more or just chat? You are welcome!</p>
 			</hgroup>
-			<div>
-				<a href="mailto:denis.novik@gmail.com">Send message</a>
+			<div class="btn-wrap">
+				<a class="btn" href="mailto:denis.novik@gmail.com">Send message</a>
 			</div>
-			<ul>
+			<ul class="sos-list">
 				<li>
 					<a href="#" target="_blank" rel="nofollow noreferrer" title="Link to LinkedIn">
 						<img src="assets/images/linkedin.svg" alt="LinkedIn icon">
@@ -150,7 +404,9 @@
 					</a>
 				</li>
 			</ul>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 		</div>
 	</footer>
 </body>
+
 </html>
