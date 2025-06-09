@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fonts */
+    --font: "Roboto", sans-serif;
+
+    /* colors */
+    --color-bg-header: #4A4F56;
+    --color-bg-body: #3B3F45;
+    --color-text: #FF8984;
+    --color-input-light: #88839E;
+    --color-input: #7A7593;
+    --color-input-hover: #625E77;
+    --color-text: #FFFFFF;
+    --color-checkbox: checkbox;
+}
