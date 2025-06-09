@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fonts */
+    --main-font: "Roboto", sans-serif;
+    /* colors */
+    --color-gray: #4A4F56;
+    --color-red: #FF8984;
+    --color-dark-gray: #3B3F45;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-list-item: #88839E;
+    --color-list-sub-item: #7A7593;
+    --color-list-item-hover: #625E77;
+    --color-text-disable: #9B96AC;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--color-white);
+    font-size: 18px;
+    background-color: var(--color-dark-gray);
+}
+
+.container {
+    max-width: 534px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.btn {
+    background-color: var(--color-gray);
+    color: var(--color-red);
+    border: none;
+    outline: none;
+    margin-bottom: 45px;
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* header start */
+.header {
+    text-align: center;
+    color: var(--color-red);
+    background-color: var(--color-gray);
+    padding: 19px 0 12px;
+    margin-bottom: 20px;
+}
+
+/* header and */
+/* dinner list start */
+
+
+.dinner-list__list {
+    background-color: var(--color-list-item);
+    margin-bottom: 45px;
+}
+
+.dinner-list__label {
+    display: flex;
+    align-items: center;
+}
+
+.dinner-list__item {
+    list-style: none;
+    padding: 10px 12px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    display: flex
+}
+
+.dinner-list__item:nth-child(2n) {
+    background-color: var(--color-list-sub-item);
+}
+
+.dinner-list__label::after {
+    font-size: 11px;
+}
+
+.dinner-list__item:nth-child(1) .dinner-list__label::after {
+    content: "   (for the next lessons about CSS) ";
+}
+
+.dinner-list__item:nth-child(2) .dinner-list__label::after {
+    content: "   (for more CSS manipulations) ";
+}
+
+.dinner-list__item:hover {
+    background-color: var(--color-list-item-hover);
+    border-top: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+}
+
+.dinner-list__input {
+    width: 20px;
+    margin-right: 16px;
+}
+
+.dinner-list__input:checked+.dinner-list__label {
+    color: var(--color-text-disable);
+    text-decoration: line-through;
+}
+
+/* .dinner-list__label::after {
+    content: " (for the next lessons about CSS) ";
+} */
