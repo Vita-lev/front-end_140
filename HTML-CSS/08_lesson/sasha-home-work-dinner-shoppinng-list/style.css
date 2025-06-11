@@ -55,8 +55,6 @@ body {
 
 /* header and */
 /* dinner list start */
-
-
 .dinner-list__list {
     background-color: var(--color-list-item);
     margin-bottom: 45px;
