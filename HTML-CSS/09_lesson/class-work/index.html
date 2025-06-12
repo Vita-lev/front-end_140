@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-09</title>
+    <style>
+        :root {
+            --bg-secondary: #4A4F56;
+            --bg-color: #3B3F45;
+            --accent-color: #FF8984;
+            --text-color: #eae2e2;
+            --text-color: #0e0d0d;
+            --prpl-light: #88839E;
+            --prpl-gray: #625E77;
+            --active-color: #625E77;
+
+            /* --size20: 20px; */
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+            /* transition: all .5s ease; */
+        }
+
+        body {
+            background-color: var(--gray-secondary);
+        }
+
+        input[type=":checked"]:checked+label {
+            font-weight: bold;
+        }
+
+
+
+        .soc-btn {
+            --size: 32px;
+            width: var(--size);
+            height: var(--size);
+            padding: calc(var(--size) / 4);
+        }
+
+        .products-list {
+            list-style: none;
+        }
+
+        .products {
+            padding-top: 50px;
+
+            &-list {
+                list-style: none;
+                background-color: #0e0d0d;
+            }
+        }
+
+        li {
+            &:nth-child(even) {
+                background-color: var(--prpl-gray);
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked label::after {
+                display: inline-block;
+            }
+        }
+
+        label {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+            }
+
+            &::before {
+
+                width: 28px;
+                height: 28px;
+                background-color: #eae2e2;
+                left: 15px;
+                top: 20px;
+            }
+        }
+
+        &::after {
+            visibility: hidden;
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+            width: 12px;
+            height: 8px;
+            rotate: -45deg;
+            left: 22px;
+            top: 27px;
+        }
+
+        small {
+            &::before {
+                content: "("
+            }
+
+            &::after {
+                content: ")"
+            }
+        }
+
+        &:active {
+            background-color: var(--active-color);
+        }
+
+        span {
+            text-decoration: line-through;
+        }
+
+        /* $primary-color: #070707;
+        p {
+        color: $primary-color; } */
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container products">
+            <ul>
+                <li>
+                    <div class="list-item">
+                        <input type="checkbox" name="product[]" id="prod_1">
+                        <label for="prod_1">
+                            <span> a lot of <smoll>for the next</smoll></span>
+                        </label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-item">
+                        <input type="checkbox" name="product[]" id="prod_1">
+                        <label for="prod_1">
+                            <span> a lot of <smoll>for the next</smoll></span>
+                        </label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-item">
+                        <input type="checkbox" name="product[]" id="prod_1">
+                        <label for="prod_1">
+                            <span> a lot of <smoll>for the next</smoll></span>
+                        </label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-item">
+                        <input type="checkbox" name="product[]" id="prod_1">
+                        <label for="prod_1">
+                            <span> a lot of <smoll>for the next</smoll></span>
+                        </label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-item">
+                        <input type="checkbox" name="product[]" id="prod_1">
+                        <label for="prod_1">
+                            <span> a lot of <smoll>for the next</smoll></span>
+                        </label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-item">
+                        <input type="checkbox" name="product[]" id="prod_1">
+                        <label for="prod_1">
+                            <span> a lot of <smoll>for the next</smoll></span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
