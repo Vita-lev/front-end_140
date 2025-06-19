@@ -1,0 +1,40 @@
+$text-color: #232323;
+
+body {
+    color: #232323;
+}
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            padding-left: 10px;
+
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            background-color: antiquewhite;
+
+
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: aquamarine;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 10px;
+        }
