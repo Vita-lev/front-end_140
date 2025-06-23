@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        /*
+        background: linear-gradient(
+            0deg,
+            rgba(5, 54, 153, 1) 0%,
+            rgba(30, 220, 227, 0.2) 100%
+          ),
+          url("https://static.scientificamerican.com/sciam/cache/file/9CAE9C60-8BC5-4CA3-95C180EFACDD99FD_source.jpg"); */
+
+        background: var(--bg-cat);
+
+        background-size: cover;
+        background-position: center;
+      }
+
+      .box--1 {
+        --bg-cat: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97hU43u6vLrdfW4Vlrjd4HLzJvrehmCIa7g&s");
+      }
+
+      .box--2 {
+        --bg-cat: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsHjqVgmo-RyH-pXfZp3_HERNuAE6GLVN3w&s");
+      }
+
+      .box--3 {
+        --bg-cat: url("https://cdn.mos.cms.futurecdn.net/KHQb3Ny62YxXnCEon4mm43.jpg");
+      }
+
+      .box--4 {
+        --bg-cat: url("https://cdn.mos.cms.futurecdn.net/KHQb3Ny62YxXnCEon4mm43.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="box box--1"></div>
+      <div class="box box--2"></div>
+      <div class="box box--3"></div>
+      <div class="box box--4"></div>
+    </div>
+  </body>
+</html>
