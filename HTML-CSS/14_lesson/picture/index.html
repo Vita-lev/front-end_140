@@ -4,7 +4,164 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lesson 14</title>
-    <style></style>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      input[type="text"],
+      input[type="amail"],
+      input[type="number"],
+      input[type="password"] select {
+        background-color: bisque;
+
+        border-radius: 4px;
+        border: 1px solid rgb(14, 190, 90);
+        height: 40px;
+        padding: 0 10px;
+
+        width: 100%;
+        outline: 0 none;
+
+        input:focus {
+          outline: 2px solid blue;
+        }
+        input:valid {
+          border-color: green;
+        }
+        input:invalid {
+          border-color: red;
+        }
+      }
+
+      input[type="number"] {
+        appearance: textfield;
+      }
+
+      select {
+        color: blueviolet;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 2rem;
+        width: 50%;
+
+        appearance: none;
+      }
+
+      select::after {
+        background-image: url(./image-1.svg) right top no-repeat;
+      }
+
+      select:hover {
+        background-color: rgb(147, 219, 244);
+      }
+
+      .form-row {
+        gap: 10px;
+      }
+
+      textarea {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        height: 100px;
+        /* padding-top: 10px;
+        padding-bottom: 10px; */
+        padding: 6px 10px;
+        background-color: bisque;
+        line-height: 1.4;
+        width: 100%;
+        /* resize: none; */
+      }
+
+      textarea:hover {
+        background-color: rgb(212, 183, 240);
+      }
+
+      textarea::-webkit-scrollbar {
+        width: 20px;
+        background-color: rgb(218, 248, 129);
+      }
+
+      input[type="radio"] {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        /* appearance: none; */
+
+        /* accent-color: red; */
+      }
+
+      /* input[type="radio"]::before
+      ::content:"";  */
+      input[type="radio"]::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+
+      input:checked {
+        background-color: tomato;
+        border-color: tomato;
+      }
+
+      .fake-file {
+        position: relative;
+        background-color: beige;
+      }
+      .fake-file input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="form-wrap">
+        <form action="">
+          <div class="form-row">
+            <div class="fake-file">
+              <input type="file" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <input type="checkbox" inputmode="numeric" />
+          </div>
+
+          <div class="form-row">
+            <input type="text" inputmode="numeric" />
+          </div>
+
+          <div class="form-row">
+            <input type="number" required />
+          </div>
+
+          <div class="form-row">
+            <select name="foo" id="">
+              <option value="">html</option>
+              <option value="">css</option>
+              <option value="">js</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <textarea name="" id=""> </textarea>
+          </div>
+
+          <div class="form-row">
+            <input type="radio" />
+          </div>
+
+          <div class="form-row">
+            <input type="checkbox" role="switch" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="./select2-4.0.13/dist/js/select2.full.min.js"></script>
+  <script src="./select2-4.0.13/dist/css/select2.css"></script>
 </html>

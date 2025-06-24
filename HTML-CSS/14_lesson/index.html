@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 14</title>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      input[type="text"],
+      input[type="amail"],
+      input[type="number"],
+      input[type="password"] select {
+        background-color: bisque;
+
+        border-radius: 4px;
+        border: 1px solid rgb(14, 190, 90);
+        height: 40px;
+        padding: 0 10px;
+
+        width: 100%;
+        outline: 0 none;
+
+        input:focus {
+          outline: 2px solid blue;
+        }
+        input:valid {
+          border-color: green;
+        }
+        input:invalid {
+          border-color: red;
+        }
+      }
+
+      input[type="number"] {
+        appearance: textfield;
+      }
+
+      select {
+        color: blueviolet;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 2rem;
+
+        appearance: none;
+      }
+
+      select::after {
+        background-image: url() right top repite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrap">
+        <form action="">
+          <div class="form-row">
+            <input type="text" inputmode="numeric" />
+          </div>
+
+          <div class="form-row">
+            <input type="number" required />
+          </div>
+
+          <div class="form-row">
+            <select name="foo" id="">
+              <option value="">html</option>
+              <option value="">css</option>
+              <option value="">js</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
