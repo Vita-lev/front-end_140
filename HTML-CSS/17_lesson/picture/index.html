@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      body {
+        font-size: 1rem;
+      }
+
+      dl dt {
+        float: left;
+        margin-right: 20px;
+      }
+      dd {
+      }
+
+      .overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        .open {
+          opasity: 1;
+          visibility: visible;
+        }
+      }
+
+      .modal {
+        background-color: aliceblue;
+        width: 600px;
+        height: 400px;
+        padding: 40px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 0 0;
+        z-index: 1001;
+        scale: 0;
+
+        transition: all 2s ease;
+        .open {
+          scale: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <dl>
+        <dt>шрифт</dt>
+        <dd>графічний малюнок</dd>
+        <dt>родина шрифтів</dt>
+        <dd>набір шрифтів що мають спільні хар-ки</dd>
+        <dt>foo</dt>
+        <dd>&nbsp;</dd>
+        <dt>bar</dt>
+        <dd>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+          accusantium?
+        </dd>
+      </dl>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo
+        sit ex eos odit esse ipsam iste, quod ea. Nemo fuga illo libero nulla
+        aliquid accusamus earum dolore consectetur quas quam dignissimos atque,
+        quod labore quia quidem optio tempore aperiam voluptas a voluptatem eum
+        nam, pariatur aut. Inventore perferendis ab laudantium id sint soluta
+        quia, consequatur esse nisi iusto, eveniet quam ea? Labore vero quasi
+        voluptatibus illum ab placeat illo enim esse temporibus, dignissimos
+        fuga pariatur ratione, maiores nostrum maxime. Magni corporis veniam
+        ipsum assumenda iusto velit pariatur beatae inventore voluptatum quae!
+        Placeat aspernatur obcaecati, perferendis velit repellat ut optio!
+      </p>
+
+      <div class="overlay">
+        <div class="modal">modal content4</div>
+        <button type="button">btn</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script></script>
