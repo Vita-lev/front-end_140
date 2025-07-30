@@ -4,10 +4,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lesson 16</title>
-    <style></style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        margin: 0 auto;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        background-color: bisque;
+        position: static;
+      }
+      .box {
+        max-height: 200px;
+        max-width: 200px;
+        /* width: calc(100% / 16.6666% - (30px * 5 / 6)); */
+
+        header {
+          height: 80px;
+          .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        .logo {
+          font-weight: 800;
+          font-size: 3rem;
+        }
+
+        nav {
+          ul {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+          }
+        }
+
+        .gamburger {
+          button {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            &::before,
+            &::after {
+              content: "";
+            }
+            span {
+              display: inline-block;
+              height: 3px;
+              width: 30px;
+              border-radius: 3px;
+              position: absolute;
+              left: 3px;
+              top: 5px;
+            }
+          }
+        }
+
+        @media screen and (max-width: 970px) {
+          .box {
+            width: calc(50% - (30px));
+          }
+        }
+
+        @media screen and (max-width: 500px) {
+          .box {
+            width: calc();
+          }
+        }
+        background-color: brown;
+        gap: 10px;
+      }
+
+      @media screen and (max-width: 970px) {
+        .box {
+          width: 33%;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .box {
+          width: calc(50% - (30px / 2));
+        }
+      }
+
+      @media screen and (min-width: 500px) and (max-width: 970px) {
+        .row {
+          position: static;
+        }
+      }
+      * + html .container {
+      }
+    </style>
   </head>
 
   <body>
-    .
+    <header>
+      <div class="container">
+        <div class="logo">logo</div>
+        <nav>
+          <ul>
+            <li>home</li>
+            <li>servises</li>
+            <li>about</li>
+            <li>contact</li>
+          </ul>
+        </nav>
+        <div class="gamburger">
+          <div class="button">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <img src="./Adopy_HP_V1.png" alt="" width="100%" />
+      </div>
+    </div>
   </body>
 </html>
