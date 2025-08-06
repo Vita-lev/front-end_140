@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Vita</title>
+
+    <style>
+      .item {
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 20px;
+        font-family: sans-serif;
+      }
+      .item__img {
+        width: 100%;
+        height: 140px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Array and Object</h1>
+
+    <div class="row">
+      <!-- <div class="item">
+        <img class="item__img" src="" alt="" />
+        <h3>Iphone</h3>
+        <p>Price: <b>2000</b> USD</p>
+      </div> -->
+    </div>
+
+    <script>
+      console.dir(document);
+      console.dir(document.title);
+
+      document.title = "Test Test Tes";
+
+      console.dir(document.location.host);
+
+      const arr = [];
+      const obg = {};
+
+      const shopItem = {
+        name: "Iphone 11",
+        price: 2000,
+        img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+      };
+      console.log(shopItem);
+      shopItem.price = 5200;
+      shopItem.new = true;
+
+      const shopItems = [
+        {
+          name: "Iphone 11",
+          price: 2000,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 12",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 12",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 12",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 12",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 12",
+          price: 1900,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 10",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 16",
+          price: 3400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 10",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+        {
+          name: "Iphone 12",
+          price: 1400,
+          img: "https://content2.rozetka.com.ua/goods/images/big/221214135.jpg",
+        },
+      ];
+      console.log(shopItems[0]);
+
+      shopItems.map((item) => {
+        document.querySelector(".row").innerHTML += `
+            <div class="item">
+            <img class="item__img" src="${item.img}" alt="${item.name}" />
+            <h3>${item.name}</h3>
+            <p>Price: <b>${item.price}</b> USD</p>
+            </div>
+            `;
+      });
+
+      // Exemple
+
+      //   document.querySelector(".row").innerHTML = `
+      //   <div class="item">
+      //     <img class="item__img" src="${shopItem.img}" alt="${shopItem.name}" />
+      //     <h3>${shopItem.name}</h3>
+      //     <p>Price: <b>${shopItem.price}</b> USD</p>
+      //   </div>
+      //   `;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4 class="title">Test</h4>
+    <div class="out"></div>
+    <img src="" alt="" />
+
+    <script>
+      const sasha = {
+        name: "Oleksandr",
+        lastName: "Kolesnyk",
+        age: 41,
+        gender: "male",
+        image:
+          "https://variety.com/wp-content/uploads/2024/06/5N7A0541-e1718042484447.jpg?w=1000&h=667&crop=1&resize=1360%2C907",
+      };
+      console.log(sasha.name);
+      document.querySelector(".out").innerHTML = `
+      <img src="${sasha.image}" alt="" width='200'>
+      <h1 class='title'>Ім'я: ${sasha.name}</h1>
+      <p>Прізвище: ${sasha.lastName}</p>
+      <h2>Вік: ${sasha.age}</h2>
+      `;
+    </script>
+  </body>
+</html>

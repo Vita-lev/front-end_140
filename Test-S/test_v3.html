@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 02</h1>
+    <div class="out"></div>
+    <div class="out01"></div>
+    <img src="" alt="" />
+
+    <script src="./user.js"></script>
+    <script>
+      console.log(userSasha);
+      console.log(userVita);
+
+      let out = document.querySelector(".out");
+
+      function userItem(item) {
+        let div = document.createElement("div");
+        div.classList.add("item");
+
+        let title = document.createElement("h1");
+        title.innerHTML = item.name;
+
+        let btn = document.createElement("button");
+        btn.classList.add("button");
+        btn.innerHTML = "Check Gendor ";
+        btn.onclick = () => {
+          if (item.gender == "woman") {
+            gen = "♀️";
+            title.innerHTML = item.name;
+          } else {
+            gen = "♂️";
+          }
+        };
+
+        div.append(title, btn);
+
+        return div;
+      }
+
+      out.append(userItem(userVita));
+      out.append(userItem(userSasha));
+    </script>
+  </body>
+</html>

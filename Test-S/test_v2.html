@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 02</h1>
+    <div class="out"></div>
+    <div class="out01"></div>
+    <img src="" alt="" />
+
+    <script src="./user.js"></script>
+    <script>
+      console.log(userSasha);
+      console.log(userVita);
+
+      function userItem(item) {
+        let gen = "";
+
+        if (item.gender == "woman") {
+          gen = "♀️";
+        } else {
+          gen = "♂️";
+        }
+
+        return `
+        <div class="item">
+          <img src="${item.img}" width="120"/>
+          <h3>Name: ${item.name} ${gen}</h3>
+          <h3>LastName: ${item.lastName}</h3>
+          <h3>Age: ${2025 - item.age}</h3>
+        </div>
+          `;
+      }
+
+      document.querySelector(".out").innerHTML += userItem(userVita);
+      document.querySelector(".out").innerHTML += userItem(userSasha);
+    </script>
+  </body>
+</html>
