@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS.lesson 7</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, "hello", false, { a: 15 }, ["a", "b", [8]]];
+      console.log(arr);
+      //127.0.0.1
+      disabled = [true, false, false, false];
+
+      //192.168.0.100
+      //192.168.0.101
+      //192.168.0.102
+      //192.168.0.103
+      // MAC ADRESS
+      //BC:2E:34:CC:F5:CC:F5
+      const CARS = [
+        {
+          brand: "",
+          model: "",
+          year: "",
+        },
+        {
+          brand: "",
+          model: "",
+          year: "",
+        },
+        {
+          brand: "",
+          model: "",
+          year: "",
+        },
+      ];
+      // [
+      //     title => 'Name'
+      // ]
+      const arr2 = [10];
+      var arr3 = new Array(10);
+
+      for (let i = 0; i < 3; i++) {
+        arr[i] = new Array(4);
+
+        console.log(arr2);
+      }
+
+      for (let i = 0; i < 3; i++) {
+        arr2[i] = [];
+        for (let j = 0; j < 4; i++) {
+          arr[i][j] = 0;
+        }
+      }
+
+      O(n ^ 3);
+      console.log(arr2);
+
+      const arr4 = [2, 6, 3, 8, 0, 6, 4, 2, 1, 6];
+      for (let i = 0; i < arr4.lenght; i++) {
+        console.log(arr4[i]);
+      }
+      //Методи: почитати що він приймає і що він повертає
+
+      //typeof []
+
+      //isArray ([])
+
+      //of()
+
+      console.log(arr4);
+      arr4.push(10);
+      arr4.sort();
+      console.log(arr4);
+
+      console.log(arr4);
+      arr4.push(10);
+      arr4.sorted((a, b) => b - a); // зворотне сортування
+      console.log(arr4);
+
+      console.log(arr4);
+      arr4.push(10);
+      const arrSorted = arr4.sorted((a, b) => b - a); // зворотне сортування
+      console.log(arr4);
+
+      console.log(arr4);
+      arr4.push(10);
+      console.log(arr4);
+      const lastEl = arr4.pop();
+      console.log(lastEl);
+      console.log(arr4);
+
+      arr.shift();
+      console.log(arr);
+
+      arr.unshift(12);
+
+      console.log(arr);
+
+      const arr5 = [14, ...arr];
+      console.log(arr5);
+
+      const [x, ...arr6] = arr;
+      console.log(arr6);
+
+      //forEach
+
+      //map
+
+      const arr2x = [];
+      arr.forEach((el, index, arrr) => {
+        //arr2x[index]= el*2
+        arr2x.push(el * 2);
+      });
+
+      console.log(arr);
+      console.log(arr2x);
+
+      const arr3x = arr.map((el) => el * 2);
+
+      //const arr3x = arr.map(element => element * 2);
+
+      const arr4x = productList.map((productItem) => productItem * 2);
+
+      console.log(arr);
+      console.log(arr4x);
+
+      //findindex()
+
+      const CART = [
+        {
+          name: "Milk",
+          qty: 1,
+        },
+      ];
+      const f = CART.findIndex((prod) => prod.name === "Milk");
+      CART[index].qty = 2;
+
+      //find
+
+      const prod = CART.find((prod) => prod.name === "Milk");
+      CART[index].qty = 2;
+
+      const CART1 = [
+        {
+          name: "Milk",
+          qty: 1,
+          isBuy: false,
+        },
+
+        {
+          name: "Bread",
+          qty: 4,
+          isBuy: true,
+        },
+      ];
+
+      const totalQty = CART.reduce((acc, el) => acc + el.qty, 0);
+      console.log("totalQty=", totalQty);
+
+      //reduce
+
+      const arr7 = [2, 6, 3, 8, 0, 6, 4, 2, 1, 6];
+
+      const sum = arr7.reduce((acc, el) => {
+        concole.log(acc, el);
+        return acc + el;
+      }, 0);
+
+      const sum1 = arr7.reduceRight((acc, el) => {
+        concole.log(acc, el);
+        return acc + el;
+      }, 0);
+    </script>
+  </body>
+</html>

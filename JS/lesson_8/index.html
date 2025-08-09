@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      .wrapper {
+        margin: o auto;
+      }
+      .container {
+        padding: 20px;
+      }
+    </style>
+    <title>JS.Lesson-8.Shop</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="card">
+          <div class="card-dody"></div>
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="text"
+                placeholder="Enter product name"
+                class="form-control"
+                id="prod_title"
+              />
+            </div>
+
+            <div class="col-2">
+              <input
+                type="number"
+                placeholder="Price"
+                class="form-control"
+                id="prod_price"
+              />
+            </div>
+
+            <div class="col-2">
+              <input
+                type="number"
+                placeholder="Quantity"
+                class="form-control"
+                id="prod_qty"
+              />
+            </div>
+
+            <div class="col-2">
+              <button class="btn-success" type="submit" onclick="addToCard">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <div class="cart-header">
+            <h3>product list</h3>
+          </div>
+          <div class="cart-body">
+            <ol id="prod_list"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const CART = [
+        {
+          title: "Milk",
+          price: 32.8,
+          qty: 1,
+          isBuy: false,
+        },
+        {
+          title: "Bread",
+          price: 28.5,
+          qty: 1,
+          isBuy: false,
+        },
+      ];
+
+      function addToCard() {
+        const title = document.getElementById("prod_title").value;
+        const price = document.getElementById("prod_price").valueAsNumber;
+        const qty = document.getElementById("prod_qty").valueAsNumber;
+
+        document;
+
+        CARD.push({
+          title,
+          price,
+          qty,
+          isBuy: false,
+        });
+      }
+
+      showProduct();
+
+      function showProduct() {
+        let html = "";
+        CART.forEach((prod) => {
+          html += `<li>&{prod_title} &{prod_price} x &{prod_qty} - &{prod_price * &{prod.qty}}</li>`;
+        });
+
+        document.getElementById("prod_list").innerHTML = html;
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>
