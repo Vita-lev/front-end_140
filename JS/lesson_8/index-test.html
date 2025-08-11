@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>To Do List</h2>
+    <input class="inp" type="text" placeholder="Name Task" />
+    <button class="btn">add</button>
+
+    <ol class="out">
+      <!-- <li>Сделать уборку</li> -->
+    </ol>
+
+    <script>
+      const tasks = [
+        {
+          name: "Уборка",
+        },
+        {
+          name: "Стирка",
+        },
+      ];
+
+      const out = document.querySelector(".out");
+      const inp = document.querySelector(".inp");
+      const btn = document.querySelector(".btn");
+
+      btn.onclick = () => {
+        tasks.push({
+          name: inp.value,
+        });
+        showTasksList();
+      };
+
+      function showTasksList() {
+        out.innerHTML = "";
+        tasks.map((item) => {
+          out.innerHTML += `<li>${item.name}</li>`;
+        });
+      }
+      showTasksList();
+    </script>
+  </body>
+</html>
